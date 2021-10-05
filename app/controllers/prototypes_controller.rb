@@ -49,7 +49,7 @@ class PrototypesController < ApplicationController
     def destroy
       @prototype=Prototype.find(params[:id])
       if @prototype.destroy
-        redirect_to prototypes_path
+        redirect_to root_path
       else
         rennder :destroy
       end
